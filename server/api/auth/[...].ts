@@ -1,6 +1,10 @@
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GithubProvider from 'next-auth/providers/github'
 import { NuxtAuthHandler } from "#auth";
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 export default NuxtAuthHandler({
     // secret needed to run nuxt-auth in production mode (used to encrypt data)
@@ -45,5 +49,6 @@ export default NuxtAuthHandler({
               }
             }
         })
-    ]
+    ],
+    adapter: PrismaAdapter(prisma),
 })
