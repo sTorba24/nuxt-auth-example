@@ -5,9 +5,7 @@ export default defineNuxtConfig({
     ],
     modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-auth'],
     auth: {
-        basePath: process.env.ORIGIN,
         baseURL: process.env.ORIGIN,
-        origin: process.env.ORIGIN,
         enableGlobalAppMiddleware: true
     }
 })
