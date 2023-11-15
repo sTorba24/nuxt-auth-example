@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     auth: {
         basePath: process.env.ORIGIN,
         baseURL: process.env.ORIGIN,
+        origin: process.env.ORIGIN,
         enableGlobalAppMiddleware: true
     }
 })
