@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-  definePageMeta({ layout: 'default' });
+  definePageMeta({ layout: 'default', auth: false });
 
   const { data, pending, error } = await useLazyAsyncData('drafts', async () => {
     return await fetch('/draft-list').then(res => res.json());
