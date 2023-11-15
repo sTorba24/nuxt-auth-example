@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     ],
     modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-auth'],
     auth: {
-        origin: 'https://nuxt-auth-example.vercel.app',
+        baseURL: process.env.ORIGIN,
         enableGlobalAppMiddleware: true
     }
 })
